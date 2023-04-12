@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeAudioDownloader", "src\YoutubeAudioDownloader.csproj", "{90DB7636-22DA-4EEB-BA44-EE335CE7577A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeDownloader", "src\YoutubeDownloader.csproj", "{90DB7636-22DA-4EEB-BA44-EE335CE7577A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{B63971FE-8283-4D86-B524-EA4E35CB7F80}"
 	ProjectSection(SolutionItems) = preProject
