@@ -1,5 +1,5 @@
 # How to get started
-On the right click the latest version in Releases and download the zip file. Extract the zip file to a location of your choice.
+On the right click the latest version in Releases and download the zip file. Extract the exe file to a location of your choice.
 
 To make it easier to use, as it is a command line tool, you can add the location of the executable to your PATH environment variable.
 
