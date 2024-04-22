@@ -25,13 +25,15 @@ if (Uri.TryCreate(urlString, UriKind.Absolute, out var url) == false)
     return 1;
 }
 
-var youtoobs = new YoutubeClient();
 
-var video = await youtoobs.Videos.GetAsync(urlString);
-var streamManifest = await youtoobs.Videos.Streams.GetManifestAsync(video.Id);
+var video = await new YoutubeClient().Videos.GetAsync(urlString);
+var streamManifest = await new YoutubeClient().Videos.Streams.GetManifestAsync(video.Id);
 var streamInfo = streamManifest.GetAudioOnlyStreams().GetWithHighestBitrate();
 
 Console.WriteLine("Downloading Audio");
-await youtoobs.Videos.Streams.DownloadAsync(streamInfo, $"{Environment.CurrentDirectory}/{video.Id}.{streamInfo.Container.Name}");
+var fileLocation = Path.Combine(Environment.CurrentDirectory, $"{video.Id}.{streamInfo.Container.Name}");
+await new YoutubeClient().Videos.Streams.DownloadAsync(streamInfo, fileLocation);
 Console.WriteLine("Done!");
+Console.WriteLine($"File Location: {fileLocation}");
+
 return 0;
